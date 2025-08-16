@@ -14,7 +14,6 @@ def get_todos():
 @app.route('/todos', methods=['POST'])
 def add_new_todo():
     request_body = request.json
-    print("Incoming request with the following body", request_body)
     todos.append(request_body)
     return jsonify(todos)
 
